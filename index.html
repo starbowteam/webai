@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Diamond AI — Скоро</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0a0a0f 0%, #111116 100%);
+            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            color: #e5e7eb;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        /* Подключение шрифта Inter */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap');
+
+        .container {
+            max-width: 700px;
+            width: 100%;
+            animation: fadeUp 0.8s ease-out;
+        }
+
+        .logo-wrapper {
+            margin-bottom: 2.5rem;
+        }
+
+        .logo {
+            max-width: 140px;
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.1));
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.02);
+        }
+
+        h1 {
+            font-size: clamp(2.8rem, 8vw, 5rem);
+            font-weight: 800;
+            background: linear-gradient(135deg, #e5e7eb, #9ca3af);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+
+        .coming-soon-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 100px;
+            padding: 0.4rem 1.2rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1.8rem;
+            color: #b0b3b8;
+        }
+
+        .message {
+            font-size: 1.3rem;
+            line-height: 1.5;
+            color: #cbd5e6;
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        .highlight {
+            font-weight: 600;
+            background: linear-gradient(135deg, #e5e7eb, #cbd5e1);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .divider {
+            width: 80px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #9ca3af, transparent);
+            margin: 2rem auto;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .social-links a {
+            color: #9ca3af;
+            font-size: 1.8rem;
+            transition: all 0.2s ease;
+            display: inline-block;
+        }
+
+        .social-links a:hover {
+            color: #e5e7eb;
+            transform: translateY(-3px);
+        }
+
+        .footer {
+            margin-top: 3rem;
+            font-size: 0.8rem;
+            color: #6b7280;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Адаптивность */
+        @media (max-width: 640px) {
+            body {
+                padding: 1.5rem;
+            }
+            .message {
+                font-size: 1.1rem;
+            }
+            .social-links a {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo-wrapper">
+            <!-- Логотип: сначала пробуем локальный mp11.png, если не загрузится — используем ссылку из Discord -->
+            <img class="logo" 
+                 src="mp11.png" 
+                 alt="Diamond AI Logo"
+                 onerror="this.onerror=null; this.src='https://media.discordapp.net/attachments/1457843805687648522/1487509991274319952/image.png?ex=69cab8a2&is=69c96722&hm=849ebb99eeba277265338d16b7b13f5d67a89836bfe9e47435aaf207b3f5addc&=&format=webp&quality=lossless&width=836&height=836'">
+        </div>
+
+        <div class="coming-soon-badge">
+            ✦ СКОРО ✦
+        </div>
+
+        <h1>Diamond AI</h1>
+        <div class="message">
+            Готовим для вас <span class="highlight">нечто особенное</span>.<br>
+            Новый уровень интеллекта уже близко.
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="message" style="font-size: 1rem; margin-top: 1rem;">
+            Оставайтесь на связи — следите за новостями в наших соцсетях.
+        </div>
+
+        <div class="social-links">
+            <a href="https://discord.gg/diamondshop" target="_blank" rel="noopener noreferrer" aria-label="Discord">
+                <i class="fab fa-discord"></i>
+            </a>
+            <a href="https://t.me/vshpps" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+                <i class="fab fa-telegram"></i>
+            </a>
+        </div>
+
+        <div class="footer">
+            © 2026 Diamond AI. Все права защищены.
+        </div>
+    </div>
+
+    <!-- Font Awesome иконки (для соцсетей) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</body>
+</html>
